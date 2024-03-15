@@ -4,7 +4,7 @@ import { Checkbox } from "react-native-paper";
 
 export const MyCheckBox = ({
   itemName = "none",
-  status = "unchecked",
+  status = "indeterminate",
   handlePress,
 }) => {
   return (

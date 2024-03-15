@@ -20,7 +20,11 @@ export const MyList = ({ notes }) => {
   //const [status, setStatus] = useState("indeterminate");
 
   const renderItem = ({ item }) => (
-    <MyCheckBox itemName={item} handlePress={() => console.log("ck")} />
+    <MyCheckBox
+      status="indeterminate"
+      itemName={item}
+      handlePress={() => console.log("check box")}
+    />
   );
 
   return (
