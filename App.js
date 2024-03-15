@@ -9,7 +9,7 @@ export default function App() {
     <SafeAreaView style={styles.container}>
       <>
         <View style={styles.headerContainer}>
-          <Text style={styles.text}>My Recording Session</Text>
+          <Text style={styles.text}>Pocket Assistant</Text>
         </View>
         <MyInputFeature />
       </>
