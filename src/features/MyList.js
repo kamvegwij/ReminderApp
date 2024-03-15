@@ -17,7 +17,7 @@ export const MyList = ({ notes }) => {
           marginBottom: spacing.sm,
         }}
       >
-        Current Notes Taken
+        Notes for session
       </Text>
       <FlatList data={notes} renderItem={renderItem}></FlatList>
     </View>
@@ -27,8 +27,8 @@ export const MyList = ({ notes }) => {
 const styles = StyleSheet.create({
   container: {
     margin: 25,
+    padding: spacing.sm,
     justifyContent: "center",
-    backgroundColor: myColors.lightblue,
   },
   text: {
     color: myColors.white,

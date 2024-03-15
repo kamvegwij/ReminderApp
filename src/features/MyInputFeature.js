@@ -8,10 +8,11 @@ import { myColors } from "../utils/colors";
 
 export const MyInputFeature = () => {
   const [text, setText] = useState("");
-  const [notes, setNotes] = useState(["Work", "Upskilling"]);
+  const [notes, setNotes] = useState([]);
 
   const CaptureNote = () => {
     this.textInput.clear();
+    setNotes([...notes, text]);
   };
 
   return (
