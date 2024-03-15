@@ -8,26 +8,31 @@ import { myColors } from "../utils/colors";
 
 export const MyInputFeature = () => {
   const [text, setText] = useState("");
-  const [item, setItem] = useState("none");
+  const [notes, setNotes] = useState(["Work", "Upskilling"]);
+
+  const CaptureNote = () => {
+    this.textInput.clear();
+  };
 
   return (
     <>
       <View style={styles.container}>
         <View style={styles.inputContainer}>
           <TextInput
-            placeholder="What do you need a reminder for?"
-            onChangeText={(val) => {
-              setText(val);
+            ref={(input) => {
+              this.textInput = input;
             }}
+            placeholder="Type in a note"
+            onChangeText={setText}
             style={{}}
           />
         </View>
         <View style={styles.buttonContainer}>
-          <RoundedButton title="+" size={40} onPress={() => setItem(text)} />
+          <RoundedButton title="+" size={40} onPress={CaptureNote} />
         </View>
       </View>
-      <View style={styles.itemList}>
-        <Text>{item}</Text>
+      <View style={styles.itemListContainer}>
+        <MyList notes={notes} />
       </View>
     </>
   );
@@ -43,5 +48,5 @@ const styles = StyleSheet.create({
   },
   inputContainer: { flex: 1, marginLeft: spacing.lg },
   buttonContainer: { margin: spacing.lg },
-  itemList: { alignItems: "center" },
+  itemListContainer: { flex: 0.5 },
 });
